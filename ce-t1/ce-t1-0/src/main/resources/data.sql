@@ -1,0 +1,10 @@
+insert into product values (1, 'a');
+insert into product values (2, 'b');
+insert into product values (3, 'c');
+insert into product values (4, 'd');
+insert into product values (5, 'e');
+insert into product values (6, 'f');
+insert into product values (7, 'g');
+insert into product values (8, 'h');
+insert into product values (9, 'i');
+insert into product values (10, 'j');
