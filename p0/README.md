@@ -1,0 +1,4 @@
+**Compile**
+
+`mvn clean package`
+
