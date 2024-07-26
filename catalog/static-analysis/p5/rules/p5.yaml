@@ -1,0 +1,30 @@
+rules:
+  - id: p5
+    message: Avoid comparison to non-zero
+    languages: [ java ]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          # For loops with non-zero upper bounds
+          - pattern: for (...; $LEFT < $RIGHT; ...) { ... }
+          - pattern: for (...; $LEFT <= $RIGHT; ...) { ... }
+
+          # For loops with non-zero lower bounds
+          - pattern: for (...; $LEFT > $RIGHT; ...) { ... }
+          - pattern: for (...; $LEFT >= $RIGHT; ...) { ... }
+
+          # While loops with non-zero bounds
+          - pattern: while ($LEFT < $RIGHT) { ... }
+          - pattern: while ($LEFT <= $RIGHT) { ... }
+          - pattern: while ($LEFT > $RIGHT) { ... }
+          - pattern: while ($LEFT >= $RIGHT) { ... }
+
+          # Do-while loops with non-zero bounds
+          - pattern: do { ... } while ($LEFT < $RIGHT);
+          - pattern: do { ... } while ($LEFT <= $RIGHT);
+          - pattern: do { ... } while ($LEFT > $RIGHT);
+          - pattern: do { ... } while ($LEFT >= $RIGHT);
+
+      - metavariable-comparison:
+          comparison: $RIGHT != 0
+          metavariable: $RIGHT

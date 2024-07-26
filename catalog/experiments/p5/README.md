@@ -1,0 +1,1 @@
+# P5: Prefer comparison-to-0 in loop conditions

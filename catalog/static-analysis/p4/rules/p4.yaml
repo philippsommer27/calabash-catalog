@@ -1,0 +1,11 @@
+rules:
+  - id: p4
+    message: Avoid multiple if-else statements
+    languages: [ java ]
+    severity: WARNING
+    patterns:
+      - pattern-regex: |
+          (?sx)
+          (?<!else\s)if\s*\([^{]*\)\s*(\{[^}]*\}|[^{};]+;)\s*
+          (?:else\s+if\s*\([^{]*\)\s*(\{[^}]*\}|[^{};]+;)\s*){3,}
+          (?!.*?else\s+if)

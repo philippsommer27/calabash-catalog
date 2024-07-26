@@ -1,0 +1,25 @@
+rules:
+  - id: p2_worst
+    languages:
+      - java
+    severity: ERROR
+    message: Avoid compiling a pattern inside a loop
+    pattern-either:
+      - pattern: |
+          for (...) {
+            ...
+            $VAR = java.util.regex.Pattern.compile(...);
+            ...
+          }
+      - pattern: |
+          while (...) {
+            ...
+            $VAR = java.util.regex.Pattern.compile(...);
+            ...
+          }
+      - pattern: |
+          do {
+            ...
+            $VAR = java.util.regex.Pattern.compile(...);
+            ...
+          } while (...)

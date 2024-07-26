@@ -1,0 +1,1 @@
+# Avoid multiple if-else statements

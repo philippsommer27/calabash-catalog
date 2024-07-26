@@ -1,0 +1,50 @@
+rules:
+  - id: p1
+    message: Avoid string concatenation in loop
+    languages: [ java ]
+    severity: WARNING
+    patterns:
+      - pattern-either:
+          - pattern: |
+              for (...) {
+                ...
+                $STR += ...;
+                ...
+              }
+          - pattern: |
+              for (...) {
+                ... 
+                $STR = $STR + ...;
+                ...
+              }
+          - pattern: |
+              while (...) {
+                ...
+                $STR = $STR + ...;
+                ...
+              }
+          - pattern: |
+              while (...) {
+                ...
+                $STR += ...;
+                ...
+              }
+          - pattern: |
+              do {
+                ...
+                $STR += ...;
+                ...
+              } while (...)
+          -  pattern: |
+               do {
+                 ...
+                 $STR = $STR + ...;
+                 ...
+               } while (...)
+      - pattern-not: |
+          for (...) {
+            ...
+            for (...) {
+              ...
+            }
+          }

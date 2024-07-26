@@ -1,0 +1,1 @@
+# P6: Inline temporary variables

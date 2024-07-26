@@ -1,0 +1,81 @@
+rules:
+  - id: p6
+    message: Inline temporary variables
+    languages: [java]
+    severity: WARNING
+    pattern-either:
+      - pattern: |
+          $VAR = ...;
+          $F(...,$VAR,...);
+      # Addition
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... + $VAR + ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = $VAR + ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... + $VAR;
+      # Subtraction
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... - $VAR - ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... - $VAR + ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = $VAR - ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... - $VAR;
+      # Multiplication
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... * $VAR * ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = $VAR * ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... * $VAR;
+      # Division
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... / $VAR / ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = $VAR / ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... / $VAR;
+      # Modulus
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... % $VAR % ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = $VAR % ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... % $VAR;
+      # Mixed operations
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... + $VAR * ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... * $VAR + ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... - $VAR / ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... / $VAR - ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... % $VAR + ...;
+      - pattern: |
+          $VAR = ...;
+          $OTHER = ... - $VAR % ...;

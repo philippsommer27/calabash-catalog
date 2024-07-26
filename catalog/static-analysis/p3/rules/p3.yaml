@@ -1,0 +1,13 @@
+rules:
+  - id: p3
+    message: Initialize builder/buffer with the appropriate size
+    languages: [ java ]
+    severity: WARNING
+    pattern: |
+      $SB = new StringBuilder();
+      ...
+      for (...) {
+        ...
+        $SB.append(...);
+        ...
+      }

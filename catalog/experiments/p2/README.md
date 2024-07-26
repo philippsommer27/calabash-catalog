@@ -1,0 +1,1 @@
+# P2: Avoid compiling a pattern inside a loop
