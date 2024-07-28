@@ -1,0 +1,31 @@
+[
+  {
+    "RuleName": "p1",
+    "Severity": 3
+  },
+  {
+    "RuleName": "p2b",
+    "Severity": 3
+  },
+  {
+    "RuleName": "p2w",
+    "Severity": 1
+  },
+  {
+    "RuleName": "p3",
+    "Severity": 2
+  },
+  {
+    "RuleName": "p4",
+    "Severity": 1
+  },
+  {
+    "RuleName": "p5",
+    "Severity": 1
+  },
+  {
+    "RuleName": "p6",
+    "Severity": 2
+  }
+]
+
