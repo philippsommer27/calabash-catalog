@@ -51,7 +51,7 @@ public class Main {
 
     public static void experiment(int repetitions, String out) throws JSONException {
         String[] words = generateRandomWords(100, 20);
-        int capacity = words.length * 20; // Assuming average word length is 20
+        int capacity = words.length * 20; 
 
         double start = Instant.now().toEpochMilli() / 1000.0;
         int totalLength = 0;
