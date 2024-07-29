@@ -4,7 +4,6 @@ rules:
       languages: [ java ]
       severity: WARNING
       patterns:
-          - focus-metavariable: $STR
           - pattern-either:
                 - pattern: |
                       $F(...) {
