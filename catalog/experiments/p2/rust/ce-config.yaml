@@ -1,5 +1,5 @@
 images:
-  - "philippsommer27/ce-p2-r-0"
+  - "philippsommer27/ce-p2-r-1"
 out: "/home/philipp/dump"
 procedure:
   internal_repetitions: 30000000
@@ -11,4 +11,4 @@ analysis:
   mode: pid
   prune_mark: "block"
 
-# and 0 with int 30000 ext 30
+# and var 0 with int 30000 ext 30
