@@ -1,5 +1,5 @@
 # calabash-catalog
-This repository servers as a catalog for experiments, results, and files related to the analysis of green software patterns within the Calabash framework.
+This repository serves as a catalog for experiments, results, and files related to the analysis of green software patterns within the Calabash framework.
 
 # Results
 The following two tables present an overview of results:
